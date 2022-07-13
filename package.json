@@ -5,6 +5,7 @@
     "dev": "minista",
     "build": "minista build",
     "preview": "minista preview",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json}'",
     "prepare": "husky install"
   },
   "prettier": {
