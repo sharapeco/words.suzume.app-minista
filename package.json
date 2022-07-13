@@ -1,11 +1,13 @@
 {
 	"name": "words.suzume.app",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"dev": "minista",
 		"build": "minista build",
 		"preview": "minista preview",
 		"format": "prettier --write '**/*.{js,jsx,ts,tsx,json}'",
+		"pull": "node pull.js",
 		"prepare": "husky install"
 	},
 	"prettier": {
