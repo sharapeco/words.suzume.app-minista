@@ -36,13 +36,12 @@ const fetchAllRecords = (query) => {
 				resolve(items)
 			}
 		)
-
 	})
 }
 
 try {
 	await mkdir(`${cacheDir}`)
-} catch (_) { }
+} catch (_) {}
 
 const base = airtable.base(env.VITE_BASE_ID)
 const words = await fetchAllRecords(
