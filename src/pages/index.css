@@ -1,7 +1,7 @@
 .site-title {
 	max-width: 40rem;
 	margin: 1rem auto 3rem;
-	font-family: "FOT-筑紫Cオールド明朝 Pr6N D", serif;
+	font-family: TsukuCOldMinPr6N-D, serif;
 	font-size: 250%;
 	font-weight: 500;
 }
@@ -30,7 +30,7 @@
 
 .toc-header {
 	float: left;
-	font-family: "秀英四号太かな", sans-serif;
+	font-family: DNPShuei4goBStd-Hv, sans-serif;
 	font-weight: 700;
 	opacity: .7;
 }

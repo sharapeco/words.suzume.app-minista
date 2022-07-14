@@ -5,7 +5,7 @@
 
 .nav {
 	margin: 0 0 2rem;
-	font-family: "秀英四号太かな", sans-serif;
+	font-family: DNPShuei4goBStd-Hv, sans-serif;
 	font-weight: 700;
 }
 
@@ -17,7 +17,7 @@
 		bottom: 2rem;
 		right: calc(50% + 24rem);
 		margin: 3rem 0;
-		font-family: "FOT-筑紫Cオールド明朝 Pr6N D", serif;
+		font-family: TsukuCOldMinPr6N-D, serif;
 		font-size: 250%;
 		font-weight: 500;
 		writing-mode: vertical-rl;
