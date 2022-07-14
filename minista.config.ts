@@ -1,8 +1,7 @@
 import { defineConfig } from 'minista'
 
 export default defineConfig({
-	assets: {
-	},
+	assets: {},
 	beautify: {
 		htmlOptions: {
 			indent_size: 0,
