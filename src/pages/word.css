@@ -1,0 +1,101 @@
+.container {
+	max-width: 40rem;
+	margin: 0 auto;
+}
+
+.nav {
+	margin: 0 0 2rem;
+	font-family: "秀英四号太かな", sans-serif;
+	font-weight: 700;
+}
+
+@media (min-width: 54rem) {
+	.nav {
+		position: fixed;
+		display: flex;
+		top: 2rem;
+		bottom: 2rem;
+		right: calc(50% + 24rem);
+		margin: 3rem 0;
+		font-family: "FOT-筑紫Cオールド明朝 Pr6N D", serif;
+		font-size: 250%;
+		font-weight: 500;
+		writing-mode: vertical-rl;
+		letter-spacing: .25em;
+	}
+	.nav a:hover,
+	.nav a:focus-visible {
+		text-decoration: none !important;
+		opacity: .7;
+	}
+}
+
+.word-header {
+	margin: 1rem 0 1.5rem;
+	font-feature-settings: "palt";
+}
+
+.word-name {
+	margin: .5rem 0 .25rem;
+	font-size: 200%;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.word-kana {
+	opacity: .7;
+	letter-spacing: .1em;
+}
+
+.word-content {
+	line-height: 2;
+	font-feature-settings: "chws";
+}
+
+@media (min-width: 32rem) {
+	.word-content {
+		font-size: 112.5%;
+	}
+}
+
+@media (min-width: 44rem) {
+	.word-content {
+		font-size: 125%;
+	}
+}
+
+.word-footer {
+	margin: 3rem 0 0;
+	font-size: 80%;
+}
+
+.word-source {
+	margin-bottom: .5rem;
+}
+
+.word-date {
+	opacity: .7;
+}
+
+.pager {
+	margin: 2rem 0 0;
+	padding: 1.5rem 0 0;
+	font-size: 80%;
+	border-top: solid 1px #ddd;
+	vertical-align: center;
+}
+
+.pager .previous {
+	float: left;
+	margin-right: 1rem;
+}
+
+.pager .next {
+	float: right;
+	margin-left: 1rem;
+}
+
+.pager a {
+	display: inline-block;
+	padding: .5rem 0;
+}

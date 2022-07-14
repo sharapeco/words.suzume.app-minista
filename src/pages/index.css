@@ -1,0 +1,47 @@
+.site-title {
+	max-width: 40rem;
+	margin: 1rem auto 3rem;
+	font-family: "FOT-筑紫Cオールド明朝 Pr6N D", serif;
+	font-size: 250%;
+	font-weight: 500;
+}
+
+@media (min-width: 54rem) {
+	.site-title {
+		position: fixed;
+		display: flex;
+		top: 2rem;
+		bottom: 2rem;
+		right: calc(50% + 24rem);
+		margin: 3rem 0;
+		writing-mode: vertical-rl;
+		letter-spacing: .25em;
+	}
+}
+
+.toc-wrap {
+	max-width: 40rem;
+	margin: 0 auto;
+}
+
+.toc-section {
+	margin: 0 0 3rem;
+}
+
+.toc-header {
+	float: left;
+	font-family: "秀英四号太かな", sans-serif;
+	font-weight: 700;
+	opacity: .7;
+}
+
+.toc-list {
+	margin: 1rem 0 1rem 1rem;
+	list-style: none;
+}
+
+.toc-list > li {
+	display: inline-block;
+	margin: 0 0 .5rem;
+	padding-left: 1em;
+}
