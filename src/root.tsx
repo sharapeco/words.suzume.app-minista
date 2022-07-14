@@ -1,4 +1,4 @@
-import { MinistaLocation } from "minista"
+import { MinistaLocation } from 'minista'
 import './root.css'
 
 export type FrontmatterProps = {
@@ -19,7 +19,12 @@ const Root = ({ children }: RootProps) => {
 	return (
 		<>
 			{children}
-			<script defer src={"https://webfont.fontplus.jp/accessor/script/fontplus.js?MRlT4X70yn0%3D&box=L29zNGvvtqo%3D&aa=1&ab=2"}></script>
+			<script
+				defer
+				src={
+					'https://webfont.fontplus.jp/accessor/script/fontplus.js?MRlT4X70yn0%3D&box=L29zNGvvtqo%3D&aa=1&ab=2'
+				}
+			></script>
 		</>
 	)
 }

@@ -40,36 +40,43 @@ export default function PageWord({
 				<title>{word.Name}</title>
 			</Head>
 
-			<div className='container'>
-				<nav className='nav'>
+			<div className="container">
+				<nav className="nav">
 					<a href="/">ない言葉</a>
 				</nav>
 
-				<article className='word'>
-					<header className='word-header'>
-						<h1 className='word-name'>{word.Name}</h1>
-						<p className='word-kana'>{word.Kana}</p>
+				<article className="word">
+					<header className="word-header">
+						<h1 className="word-name">{word.Name}</h1>
+						<p className="word-kana">{word.Kana}</p>
 					</header>
 
-					<p className='word-content'>{word.Notes}</p>
+					<p className="word-content">{word.Notes}</p>
 
-					<footer className='word-footer'>
+					<footer className="word-footer">
 						{word.Source && (
-							<p className='word-source'>
-								初出: <a href={word.Source} target='_blank'>{word.Source}</a>
+							<p className="word-source">
+								初出:{' '}
+								<a href={word.Source} target="_blank">
+									{word.Source}
+								</a>
 							</p>
 						)}
-						<p className='word-date'>{formatDate(word.Date)}</p>
+						<p className="word-date">{formatDate(word.Date)}</p>
 					</footer>
 				</article>
 
 				{(previous || next) && (
-					<nav className='pager'>
+					<nav className="pager">
 						{previous && (
-							<div className='previous'>← <a href={getWordLink(previous)}>{previous.Name}</a></div>
+							<div className="previous">
+								← <a href={getWordLink(previous)}>{previous.Name}</a>
+							</div>
 						)}
 						{next && (
-							<div className='next'><a href={getWordLink(next)}>{next.Name}</a> →</div>
+							<div className="next">
+								<a href={getWordLink(next)}>{next.Name}</a> →
+							</div>
 						)}
 					</nav>
 				)}

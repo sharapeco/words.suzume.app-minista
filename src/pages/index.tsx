@@ -15,7 +15,7 @@ export const getStaticData = async () => {
 	return {
 		props: {
 			words,
-		}
+		},
 	}
 }
 
@@ -33,12 +33,10 @@ const PageHome = ({ words }: Props & LocationProps) => {
 				{wordChunks.map((chunk) => (
 					<section key={chunk.initial} className="toc-section">
 						<h2 className="toc-header">{chunk.initial}</h2>
-						<ul className='toc-list'>
+						<ul className="toc-list">
 							{chunk.items.map((word) => (
 								<li key={word.id}>
-									<a href={getWordLink(word)}>
-										{word.Name}
-									</a>
+									<a href={getWordLink(word)}>{word.Name}</a>
 								</li>
 							))}
 						</ul>
@@ -62,7 +60,7 @@ function chunkAbc(words: Word[]): AbcChunk<Word>[] {
 		if (initial !== prevInitial) {
 			chunks.push({
 				initial,
-				items: []
+				items: [],
 			})
 			prevInitial = initial
 		}

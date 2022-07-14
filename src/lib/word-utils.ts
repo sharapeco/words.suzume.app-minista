@@ -1,4 +1,4 @@
-import { Word } from "../types/word"
+import { Word } from '../types/word'
 
 export const sanitizeWord = (word: string): string => {
 	return word.replace(/[ .:/\\#?<>\[\]{}|]/g, '_')

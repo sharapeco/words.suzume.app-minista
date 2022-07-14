@@ -27,8 +27,9 @@ const strcmp = (a: string, b: string) => {
 }
 
 export const fetchWords = async () => {
-	const words = (await readJson<Word>('words'))
-		.filter((word) => word.Status === 'public')
+	const words = (await readJson<Word>('words')).filter(
+		(word) => word.Status === 'public'
+	)
 	words.sort((a, b) => strcmp(a.Kana, b.Kana))
 	return {
 		words,
