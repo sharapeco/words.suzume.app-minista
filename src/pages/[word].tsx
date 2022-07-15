@@ -38,6 +38,7 @@ export default function PageWord({
 		<>
 			<Head>
 				<title>{word.Name}</title>
+				<meta name="creation_date" content={word.Date} />
 			</Head>
 
 			<div className="container">
@@ -62,7 +63,9 @@ export default function PageWord({
 								</a>
 							</p>
 						)}
-						<p className="word-date">{formatDate(word.Date)}</p>
+						<p className="word-date">
+							<time dateTime={word.Date}>{formatDate(word.Date)}</time>
+						</p>
 					</footer>
 				</article>
 
@@ -86,5 +89,9 @@ export default function PageWord({
 }
 
 function formatDate(dateStr: string): string {
-	return DateTime.fromISO(dateStr).toFormat('yyyy年M月d日 H:mm')
+	return (
+		DateTime.fromISO(dateStr)
+			.setZone('Asia/Tokyo')
+			.toFormat('yyyy年M月d日 H:mm') + ' JST'
+	)
 }
