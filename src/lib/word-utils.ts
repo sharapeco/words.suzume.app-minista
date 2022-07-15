@@ -1,7 +1,7 @@
 import { Word } from '../types/word'
 
 export const sanitizeWord = (word: string): string => {
-	return word.replace(/[ .:/\\#?<>\[\]{}|]/g, '_')
+	return word.replace(/[ .:/\\#?<>\[\]{}|]/g, '_').toLocaleLowerCase()
 }
 
 export const getWordLink = (word: Word): string => {
