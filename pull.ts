@@ -1,10 +1,16 @@
 import dotenv from 'dotenv'
 import { mkdir, writeFile } from 'fs/promises'
-import airtable from 'airtable'
+import airtable, { FieldSet, Records } from 'airtable'
+import { WordAT } from './src/types/word'
+import { ImportMetaEnv } from './src/env'
+
+type ProcessEnv = {
+	[key: string]: string | undefined
+}
 
 dotenv.config()
 
-const env = process.env
+const env = process.env as ProcessEnv & ImportMetaEnv
 
 const cacheDir = 'api-cache'
 
@@ -13,13 +19,16 @@ airtable.configure({
 	apiKey: env.VITE_AIRTABLE_API_KEY,
 })
 
-const fetchAllRecords = (query) => {
+const fetchAllRecords = <T extends FieldSet>(
+	query
+): Promise<(T & { id: string })[]> => {
 	return new Promise((resolve, reject) => {
-		const items = []
+		const items: (T & { id: string })[] = []
 
 		query.eachPage(
-			function page(records, fetchNextPage) {
+			function page(records: Records<T>, fetchNextPage) {
 				records.forEach((record) => {
+					console.log(record)
 					items.push({
 						...record.fields,
 						id: record.id,
@@ -44,7 +53,7 @@ try {
 } catch (_) {}
 
 const base = airtable.base(env.VITE_BASE_ID)
-const words = await fetchAllRecords(
+const words = await fetchAllRecords<WordAT>(
 	base('words').select({
 		view: 'Grid view',
 	})
