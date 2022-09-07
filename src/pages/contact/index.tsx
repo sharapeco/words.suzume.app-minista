@@ -6,7 +6,13 @@ export default function Contact() {
 			<Head>
 				<title>Contact</title>
 			</Head>
-			<form name="contact" action="/contact/success" method="POST" data-netlify="true">
+			<form
+				name="contact"
+				action="/contact/success"
+				method="POST"
+				data-netlify="true"
+			>
+				<input type="hidden" name="subject" value="『ない言葉』へのお問い合わせ" />
 				<p>
 					<label>
 						Your Name: <input type="text" name="name" />
