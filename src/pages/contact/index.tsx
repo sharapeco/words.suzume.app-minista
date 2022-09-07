@@ -12,7 +12,11 @@ export default function Contact() {
 				method="POST"
 				data-netlify="true"
 			>
-				<input type="hidden" name="subject" value="『ない言葉』へのお問い合わせ" />
+				<input
+					type="hidden"
+					name="subject"
+					value="『ない言葉』へのお問い合わせ"
+				/>
 				<p>
 					<label>
 						Your Name: <input type="text" name="name" />
